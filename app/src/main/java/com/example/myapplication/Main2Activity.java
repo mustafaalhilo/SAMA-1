@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
 
     private ListView listView;
     private MovieAdapter mAdapter;
-
+    ///fasdfsdfawefwerf
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
