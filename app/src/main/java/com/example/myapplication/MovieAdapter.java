@@ -19,7 +19,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
     private Context mContext;
     private List<Movie> moviesList = new ArrayList<>();
 
-    public MovieAdapter(@NonNull Context context,@LayoutRes ArrayList<Movie> list) {
+    public MovieAdapter(@NonNull Context context,/*@LayoutRes*/ ArrayList<Movie> list) {
         super(context, 0 , list);
         mContext = context;
         moviesList = list;
@@ -39,7 +39,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         name.setText(currentMovie.getmName());
 
         TextView release = listItem.findViewById(R.id.textView_release);
-        release.setText(currentMovie.getmRelease());
+        release.setText(currentMovie.getmGenre());
 
         return listItem;
     }

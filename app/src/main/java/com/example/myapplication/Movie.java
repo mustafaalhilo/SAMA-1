@@ -8,13 +8,13 @@ public class Movie {
         // Store the name of the movie
         private String mName;
         // Store the release date of the movie
-        private String mRelease;
+        private String mGenre;
 
         // Constructor that is used to create an instance of the Movie object
-        public Movie(String mName, String mRelease) {
+        public Movie(String mName, String mGenre) {
 
             this.mName = mName;
-            this.mRelease = mRelease;
+            this.mGenre = mGenre;
         }
 
 
@@ -26,12 +26,12 @@ public class Movie {
             this.mName = mName;
         }
 
-        public String getmRelease() {
-            return mRelease;
+        public String getmGenre() {
+            return mGenre;
         }
 
         public void setmRelease(String mRelease) {
-            this.mRelease = mRelease;
+            this.mGenre = mRelease;
         }
 
 }
