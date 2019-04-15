@@ -78,17 +78,22 @@ public class AboutPage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            // leave blank, it leads to about page
         } else if (id == R.id.nav_gallery) {
             startActivity(new Intent(this, RecommendationsPage.class));
 
+
         } else if (id == R.id.nav_slideshow) {
-            //startActivity(new Intent(this, Main3Activity.class));
+            //watchmelater page
+            startActivity(new Intent(this, WatchMeLaterPage.class));
 
 
         } else if (id == R.id.nav_manage) {
+            //watched page
+            startActivity(new Intent(this, WatchedPage.class));
 
         } else if (id == R.id.nav_share) {
+            //logout function
 
         } /*else if (id == R.id.nav_send) {
 

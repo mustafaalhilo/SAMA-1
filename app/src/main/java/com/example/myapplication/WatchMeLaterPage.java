@@ -6,18 +6,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class RecommendationsPage extends AppCompatActivity {
-
-
+public class WatchMeLaterPage extends AppCompatActivity{
     private ListView listView;
     private MovieAdapter mAdapter;
-    ///fasdfsdfawefwerf
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recommendations_page);
+        setContentView(R.layout.watchmelater_page);
 
-        listView = findViewById(R.id.movies_list);
+        listView = findViewById(R.id.movies_list_watchmelater);
         ArrayList<Movie> moviesList = new ArrayList<>();
         //this is where we'd call dbmgr sql code
         moviesList.add(new Movie( "After Earth", "Horror"));
@@ -35,6 +32,4 @@ public class RecommendationsPage extends AppCompatActivity {
         listView.setAdapter(mAdapter);
 
     }
-
-
 }
