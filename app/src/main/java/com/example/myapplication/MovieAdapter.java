@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import android.widget.Button;
 
 public class MovieAdapter extends ArrayAdapter<Movie> {
     private Context mContext;
@@ -38,8 +38,12 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         TextView name = listItem.findViewById(R.id.textView_name);
         name.setText(currentMovie.getmName());
 
-        TextView release = listItem.findViewById(R.id.textView_release);
-        release.setText(currentMovie.getmGenre());
+        TextView genre = listItem.findViewById(R.id.textView_genre);
+        genre.setText(currentMovie.getmGenre());
+        Button wmlBtn = (Button)listItem.findViewById(R.id.wml_btn);
+        Button watchedBtn = (Button)listItem.findViewById(R.id.watched_btn);
+        Button blockBtn = (Button)listItem.findViewById(R.id.block_btn);
+
 
         return listItem;
     }

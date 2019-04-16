@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class WatchedPage extends AppCompatActivity{
     private ListView listView;
-    private MovieAdapter mAdapter;
+    private MovieAdapterWatched mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class WatchedPage extends AppCompatActivity{
         moviesList.add(new Movie("The Grey", "Adult"));
 
 
-        mAdapter = new MovieAdapter(this, moviesList);
+        mAdapter = new MovieAdapterWatched(this, moviesList);
         listView.setAdapter(mAdapter);
 
     }

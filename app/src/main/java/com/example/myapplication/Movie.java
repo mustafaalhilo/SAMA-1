@@ -30,8 +30,8 @@ public class Movie {
             return mGenre;
         }
 
-        public void setmRelease(String mRelease) {
-            this.mGenre = mRelease;
+        public void setmGenre(String mGenre) {
+            this.mGenre = mGenre;
         }
 
 }

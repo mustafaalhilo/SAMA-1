@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class WatchMeLaterPage extends AppCompatActivity{
     private ListView listView;
-    private MovieAdapter mAdapter;
+    private MovieAdapterWatchMeLater mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class WatchMeLaterPage extends AppCompatActivity{
         moviesList.add(new Movie("The Grey", "Adult"));
 
 
-        mAdapter = new MovieAdapter(this, moviesList);
+        mAdapter = new MovieAdapterWatchMeLater(this, moviesList);
         listView.setAdapter(mAdapter);
 
     }

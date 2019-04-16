@@ -14,11 +14,28 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/textView_release_watchmelater"
+        android:id="@+id/textView_genre_watchmelater"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView_name_watchmelater"
         android:layout_margin="20dp"
         android:textSize="20sp"/>
+    <Button
+        android:id="@+id/watched_wml_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:text="Watched" />
+
+    <Button
+        android:id="@+id/remove_wml_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/watched_wml_btn"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="Remove" />
 
 </RelativeLayout>
