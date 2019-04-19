@@ -2,8 +2,7 @@ package com.example.myapplication;
 
 public class Movie {
 
-
-        // Store the id of the  movie poster
+         // Store the id of the  movie poster
 
         // Store the name of the movie
         private String mName;
