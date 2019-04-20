@@ -8,4 +8,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Recommendations</string>
     <string name="title_activity_main3">Main3Activity</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="movie_genre">Movie Genre</string>
+    <string name="rating">Rating</string>
+    <string name="genre">Genre</string>
+    <string name="add_movie">ADD MOVIE</string>
 </resources>
