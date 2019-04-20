@@ -10,10 +10,14 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import android.widget.Toast;
+import android.content.Context;
 
 public class TestActivity extends AppCompatActivity {
     Intent intent;
-
+    private Button watchedButton;
+    private Button laterButton;
+    private Button blockButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +27,12 @@ public class TestActivity extends AppCompatActivity {
         ListView lv = (ListView) findViewById(R.id.user_list);
         ListAdapter adapter = new SimpleAdapter(TestActivity.this, movieList, R.layout.list_row, new String[]{"movieName"}, new int[]{R.id.name});
         lv.setAdapter(adapter);
+        watchedButton = (Button) findViewById(R.id.test_btn1);
+        laterButton = (Button) findViewById(R.id.test_btn2);
+        blockButton = (Button) findViewById(R.id.test_btn3);
+
+
 
     }
-
-
 }
 

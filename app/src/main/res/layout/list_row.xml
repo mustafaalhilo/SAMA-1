@@ -11,7 +11,7 @@
         android:textStyle="bold"
         android:textSize="17dp" />
     <Button
-        android:id="@+id/wml_btn"
+        android:id="@+id/test_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -20,18 +20,18 @@
         android:text="Later" />
 
     <Button
-        android:id="@+id/watched_btn"
+        android:id="@+id/test_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/wml_btn"
+        android:layout_toLeftOf="@id/test_btn1"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
         android:text="Watched" />
     <Button
-        android:id="@+id/block_btn"
+        android:id="@+id/test_btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/watched_btn"
+        android:layout_toLeftOf="@id/test_btn2"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
         android:text="Block" />
