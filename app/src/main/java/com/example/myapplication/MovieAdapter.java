@@ -38,7 +38,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         TextView name = listItem.findViewById(R.id.textView_name);
         name.setText(currentMovie.getmName());
 
-        TextView genre = listItem.findViewById(R.id.textView_release);
+        TextView genre = listItem.findViewById(R.id.textView_genre);
         genre.setText(currentMovie.getmGenre());
         Button wmlBtn = (Button)listItem.findViewById(R.id.wml_btn);
         Button watchedBtn = (Button)listItem.findViewById(R.id.watched_btn);
