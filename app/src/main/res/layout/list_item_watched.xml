@@ -10,23 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/textView_genre_watched"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView_name_watched"
-        android:layout_margin="20dp"
-        android:textSize="20sp"/>
     <Button
         android:id="@+id/remove_watched_btn"
+        android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="5dp"
+
         android:text="Remove" />
 
 </RelativeLayout>

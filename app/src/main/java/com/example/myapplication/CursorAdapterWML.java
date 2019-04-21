@@ -12,9 +12,8 @@ import android.widget.TextView;
 public class CursorAdapterWML extends CursorAdapter {
     private LayoutInflater cursorInflater;
     // Default constructor
-    private Button watchedB;
-    private Button blockB;
-    private Button wmlB;
+    private Button watchedBtn;
+    private Button removeBtn;
     public CursorAdapterWML(Context context, Cursor cursor, int flags) {
         super(context, cursor, 0);
         cursorInflater = (LayoutInflater) context.getSystemService(
@@ -23,36 +22,31 @@ public class CursorAdapterWML extends CursorAdapter {
     }
 
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView textViewTitle = (TextView) view.findViewById(R.id.name);
+        TextView textViewTitle = (TextView) view.findViewById(R.id.textView_name_watchmelater);
         String title = cursor.getString(cursor.getColumnIndex("_id"));
         textViewTitle.setText(title);
-        wmlB=(Button) view.findViewById(R.id.test_btn1);
-        watchedB=(Button) view.findViewById(R.id.test_btn2);
-        blockB=(Button) view.findViewById(R.id.test_btn3);
-        wmlB.setOnClickListener(new View.OnClickListener(){
+
+        watchedBtn = (Button)view.findViewById(R.id.watched_wml_btn);
+        removeBtn = (Button)view.findViewById(R.id.remove_wml_btn);
+        watchedBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
             }
         });
-        watchedB.setOnClickListener(new View.OnClickListener(){
+        removeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
             }
         });
-        blockB.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
 
-            }
-        });
 
 
     }
 
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // R.layout.list_row is your xml layout for each row
-        return cursorInflater.inflate(R.layout.list_row, parent, false);
+        return cursorInflater.inflate(R.layout.list_item_watchmelater, parent, false);
     }
 }
