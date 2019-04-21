@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME= "sama.db";
     public static final String MOVIE_TABLE= "MOVIE";
     public static final String M_ID= "movieId";
-    public static final String M_NAME= "movieName";
+    public static final String M_NAME= "_id";
     public static final String M_GENRE= "genre";
     public static final String M_RATING= "rating";
 
@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table if not exists movie(\n" +
                 "movieId INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
-                "movieName TEXT NOT NULL UNIQUE ,\n" +
+                "_id TEXT NOT NULL UNIQUE ,\n" +
                 "genre TEXT NOT NULL,\n" +
                 "rating TEXT\n" +
                 ");");
@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public long addMovie(String movieName, String genre,String rating){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("movieName", movieName);
+        contentValues.put("_id", movieName);
         contentValues.put("genre", genre);
         contentValues.put("rating", rating);
         long res= db.insert("MOVIE", null,contentValues);
@@ -54,7 +54,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getRecomendationList(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT movieName FROM"+ MOVIE_TABLE, null);
+        Cursor data = db.rawQuery("SELECT _id FROM "+ MOVIE_TABLE, null);
         return data;
     }
     public ArrayList<HashMap<String, String>> GetMovies(){
