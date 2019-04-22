@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+
+import static android.support.v4.content.ContextCompat.startActivity;
 
 public class CursorAdapterRec extends CursorAdapter {
     private LayoutInflater cursorInflater;
@@ -22,9 +27,9 @@ public class CursorAdapterRec extends CursorAdapter {
 
     }
 
-    public void bindView(View view, Context context, Cursor cursor) {
+    public void bindView(View view, final Context context, final Cursor cursor) {
         TextView textViewTitle = (TextView) view.findViewById(R.id.textView_name);
-        String title = cursor.getString(cursor.getColumnIndex("_id"));
+        final String title = cursor.getString(cursor.getColumnIndex("_id"));
         textViewTitle.setText(title);
         wmlB=(Button) view.findViewById(R.id.wml_btn);
         watchedB=(Button) view.findViewById(R.id.watched_btn);
@@ -32,6 +37,12 @@ public class CursorAdapterRec extends CursorAdapter {
         wmlB.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                //this is solely an example and proof of concept
+                DatabaseHelper db = new DatabaseHelper(context);
+                String name = title +"420";
+                String genre = "Horrpr";
+                String rating = "4";
+                long res = db.addMovie(name, genre, rating);
 
             }
         });
